@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <h1>To Do List</h1>
+    <form id="myForm">
+
+      <select name="action" id="action">
+         <option value="display">Display</option>
+         <option value="complete">Complete</option>
+         <option value="delete">Delete</option>
+         <option value="insert">Insert</option>
+     </select>
+     <br>
+     <div id="display">
+        
+     </div>
+
+     <div id="complete">
+        
+     </div>
+
+     <div id="delete">
+        delete
+     </div>
+
+     <div id="insert">
+        To do list item<input type="text" id="item">
+     </div>
+     <br>
+      Perform Action<input type="button" id="do_something" value="Submit"><br>
+   </form>
+    <div id="result"></div>
+    <script src="java.js"></script>
+</body>
+
+</html>

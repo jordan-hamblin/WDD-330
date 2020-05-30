@@ -1,0 +1,37 @@
+
+#insert{
+   display: none;
+}
+
+#delete{
+  display: none;
+}
+
+#complete{
+  display: none;
+}
+
+#display{
+  display: none;
+}
+
+body {
+  background-size: 100% 100%;
+}
+h1{
+  text-align: center;
+   font-size: 60px;
+   color: black;
+}
+form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+  
