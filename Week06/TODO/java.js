@@ -30,15 +30,16 @@ function clickClose() {
 window.onload = function () {
 
     masterList = [];
-    masterList = document.getElementsByTagName("LI");
-
+    
+    // localStorage.clear();
     let initialList = JSON.parse(localStorage.getItem("li's"));  //Will need to put this in place of above code when it works
+    
     
     for (i = 0; i < initialList.length; i++) {
         let li = document.createElement("li");
-        let t = document.createTextNode(initialList[i]);
+        let t = document.createTextNode(initialList[i].textContent.slice(0, -1));
         li.appendChild(t);
-        document.getElementById("myUL").appendChild(t);
+        document.getElementById("myUL").appendChild(li);
     }
 
     createClose();
@@ -68,15 +69,16 @@ function newElement() {
 
     createClose();
     clickClose();
-    masterList = document.getElementsByTagName("LI");
+    
     
 }
 
 function showAll() {
+    let items = document.getElementsByTagName("LI");
     let i;
     let j = 0
-    for (i = 0; i < masterList.length; i++) {
-        masterList[i].style.visibility = "visible";
+    for (i = 0; i < items.length; i++) {
+        items[i].style.visibility = "visible";
         j++;
     }
     j += " Tasks Left";
@@ -84,14 +86,15 @@ function showAll() {
 }
 
 function showActive() {
+    let items = document.getElementsByTagName("LI");
     let i;
     let j = 0;
-    for (i = 0; i < masterList.length; i++) {
-        if (masterList[i].className == "checked") {
-            masterList[i].style.visibility = "hidden";
+    for (i = 0; i < items.length; i++) {
+        if (items[i].className == "checked") {
+            items[i].style.visibility = "hidden";
         }
         else {
-            masterList[i].style.visibility = "visible";
+            items[i].style.visibility = "visible";
             j++;
         }
     }
@@ -100,15 +103,16 @@ function showActive() {
 }
 
 function showComplete() {
+    let items = document.getElementsByTagName("LI");
     let i;
     let j = 0;
-    for (i = 0; i < masterList.length; i++) {
-        if (masterList[i].className == "checked") {
-            masterList[i].style.visibility = "visible";
+    for (i = 0; i < items.length; i++) {
+        if (items[i].className == "checked") {
+            items[i].style.visibility = "visible";
             j++;
         }
         else {
-            masterList[i].style.visibility = "hidden";
+            items[i].style.visibility = "hidden";
         }
     }
     j += " Tasks Left";
@@ -118,6 +122,6 @@ function showComplete() {
 window.onunload = function () {
     masterList = document.getElementsByTagName("LI");
     let temp = Array.prototype.slice.call( masterList )
-    localStorage.setItem("li's", JSON.stringify(temp));
+    localStorage.setItem("li's", JSON.stringify(temp, ['textContent']));
 }
 
