@@ -1,0 +1,9 @@
+Notes
+
+How significant is the memory cost for storing the results in cache?
+ 
+Is an IIFE kind of like an onload function but can happen at times different times than when the page is loading?
+
+Are functions that define and reqrite themselves industry approved? That seems kind of dangerous to me.
+
+Pure functions sound pretty good. Is that the way that industry is leaning in JavaScript is OOP still the preferred way?
