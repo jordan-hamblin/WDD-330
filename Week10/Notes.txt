@@ -1,0 +1,15 @@
+Notes
+
+I have used a little bit of both html built in validation and javascript validation. I have found the built in
+validation a lot simpler to use. How common is it to use javascript validation in industry? Does it come down
+to personal preference or is there an industry standard?
+
+Along the same lines, in industry if you do use the javascript validation are you using API's or is it
+completely custom?
+
+Is Fetch or AJAX used more in modern web development? I am more familiar with Ajax so it would be nice to be
+able to keep using that but if Fetch is the way to go I will probably switch.
+
+From the reading it seems like fetch is better at error handling than AJAX as well as interacting with different
+functions. Is there any apparent advantage of AJAX over fetch?
+
